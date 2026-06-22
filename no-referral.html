@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Referral — Meet Me There</title>
+<link rel="stylesheet" href="css/splash.css">
+</head>
+<body class="splash">
+<div class="blueprint"></div>
+<nav class="splash-nav">
+  <span class="splash-logo">MMT — Est. 2026</span>
+  <div class="splash-nav-links" id="splash-nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#join">Join</a>
+  </div>
+  <button class="splash-mobile-toggle" id="splash-toggle" aria-label="Toggle menu">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</nav>
+<div class="noreferral-shell">
+  <div class="noreferral-card">
+    <div class="eyebrow" style="margin-bottom:16px;">Meet Me There</div>
+    <h1>Thanks for your interest.</h1>
+    <p>Right now, Meet Me There is only open to members who've been referred by someone already in the circle. It's how we keep things small, trusted, and worth being a part of.</p>
+    <p style="font-style:italic;font-size:0.8rem;">If you know someone in the network, ask them for a referral code. If not — sit tight. We're growing slowly, on purpose.</p>
+    <a href="index.html" class="btn">← Back home</a>
+  </div>
+</div>
+<footer class="splash-footer"><span>© 2026 Meet Me There</span></footer>
+<script>
+  const toggle = document.getElementById('splash-toggle');
+  const links = document.getElementById('splash-nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join — Meet Me There</title>
+<link rel="stylesheet" href="css/splash.css">
+</head>
+<body class="splash">
+<div class="blueprint"></div>
+
+<nav class="splash-nav">
+  <span class="splash-logo">MMT — Est. 2026</span>
+  <div class="splash-nav-links" id="splash-nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#join">Join</a>
+  </div>
+  <button class="splash-mobile-toggle" id="splash-toggle" aria-label="Toggle menu">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</nav>
+
+<section class="signup-shell">
+  <div class="signup-wrap">
+
+    <div class="step-rail">
+      <div class="step-item active" data-step="1"><span class="step-num">01</span><span>Referral</span></div>
+      <div class="step-item" data-step="2"><span class="step-num">02</span><span>About you</span></div>
+      <div class="step-item" data-step="3"><span class="step-num">03</span><span>This or that</span></div>
+      <div class="step-item" data-step="4"><span class="step-num">04</span><span>Home style</span></div>
+      <div class="step-item" data-step="5"><span class="step-num">05</span><span>Your home</span></div>
+    </div>
+
+    <div class="signup-card">
+
+      <!-- STEP 1: Referral + contact info -->
+      <form class="step-panel active" data-panel="1">
+        <span class="signup-eyebrow">Step 01</span>
+        <h2 class="signup-heading">Who invited you?</h2>
+        <p class="signup-sub">Meet Me There only grows through referrals. Enter your code and your details to get started.</p>
+
+        <label class="field-label" for="ref-code">Referral code</label>
+        <input class="field-input" id="ref-code" type="text" placeholder="e.g. PRIYA-LX42">
+
+        <label class="field-label" for="ref-email">Referrer's email <span style="opacity:0.5">(optional)</span></label>
+        <input class="field-input" id="ref-email" type="email" placeholder="person who invited you">
+
+        <div class="field-row-two" style="margin-top:22px;">
+          <div>
+            <label class="field-label" for="full-name">Your name</label>
+            <input class="field-input" id="full-name" type="text" placeholder="Jordan Avery">
+          </div>
+          <div>
+            <label class="field-label" for="email">Your email</label>
+            <input class="field-input" id="email" type="email" placeholder="you@example.com">
+          </div>
+        </div>
+
+        <label class="field-label" for="phone">Phone number</label>
+        <input class="field-input" id="phone" type="tel" placeholder="+1 (404) 000-0000">
+
+        <div class="step-nav" style="justify-content:flex-end">
+          <button type="button" class="btn btn-primary next-btn" data-next="2">Continue →</button>
+        </div>
+      </form>
+
+      <!-- STEP 2: About you -->
+      <form class="step-panel" data-panel="2">
+        <span class="signup-eyebrow">Step 02</span>
+        <h2 class="signup-heading">A bit about you</h2>
+        <p class="signup-sub">This shows on your profile so hosts and guests get a feel for who they're meeting.</p>
+
+        <div class="field-row-two">
+          <div>
+            <label class="field-label" for="birthday">Birthday</label>
+            <input class="field-input" id="birthday" type="date">
+            <span class="field-note">This will not be displayed on your profile.</span>
+          </div>
+          <div>
+            <label class="field-label" for="zodiac">Zodiac sign</label>
+            <select class="field-input" id="zodiac">
+              <option>Aries</option><option>Taurus</option><option>Gemini</option><option>Cancer</option>
+              <option>Leo</option><option>Virgo</option><option>Libra</option><option>Scorpio</option>
+              <option>Sagittarius</option><option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="field-label" for="pets">Pets</label>
+        <input class="field-input" id="pets" type="text" placeholder="A rescue mutt named Biscuit, or 'none'">
+
+        <label class="field-label" for="about-me">About me</label>
+        <textarea class="field-input" id="about-me" rows="3" placeholder="Tell your future hosts and guests a little about yourself..."></textarea>
+
+        <label class="field-label">Hobbies <span style="opacity:0.5">— pick all that apply</span></label>
+        <div class="tag-select">
+          <button type="button" class="tag-opt">Cooking</button>
+          <button type="button" class="tag-opt">Surfing</button>
+          <button type="button" class="tag-opt">Reading</button>
+          <button type="button" class="tag-opt">Hiking</button>
+          <button type="button" class="tag-opt">Photography</button>
+          <button type="button" class="tag-opt">Live music</button>
+          <button type="button" class="tag-opt">Gardening</button>
+          <button type="button" class="tag-opt">Cycling</button>
+          <button type="button" class="tag-opt">Painting</button>
+          <button type="button" class="tag-opt">Yoga</button>
+          <button type="button" class="tag-opt">Running</button>
+          <button type="button" class="tag-opt">Wine tasting</button>
+          <button type="button" class="tag-opt">Thrifting</button>
+          <button type="button" class="tag-opt">Board games</button>
+          <button type="button" class="tag-opt">Dancing</button>
+          <button type="button" class="tag-opt">Writing</button>
+          <button type="button" class="tag-opt">Climbing</button>
+          <button type="button" class="tag-opt">Film & TV</button>
+          <button type="button" class="tag-opt">Skiing</button>
+          <button type="button" class="tag-opt">Pottery</button>
+          <button type="button" class="tag-opt">Art galleries</button>
+          <button type="button" class="tag-opt">Travel</button>
+          <button type="button" class="tag-opt">Fashion</button>
+          <button type="button" class="tag-opt">Pilates</button>
+          <button type="button" class="tag-opt">Fishing</button>
+          <button type="button" class="tag-opt">Birdwatching</button>
+        </div>
+
+        <label class="field-label" for="other-hobbies">Anything else? <span style="opacity:0.5">(type your own)</span></label>
+        <input class="field-input" id="other-hobbies" type="text" placeholder="e.g. ceramics, salsa dancing, urban sketching...">
+
+        <label class="field-label" for="travel-plans">Upcoming travel in the next 6 months</label>
+        <textarea class="field-input" id="travel-plans" rows="2" placeholder="e.g. NYC in August, Paris in October — even rough plans count"></textarea>
+        <span class="field-note">This helps us understand where the circle needs homes most.</span>
+
+        <div class="step-nav">
+          <button type="button" class="btn prev-btn" data-prev="1">← Back</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="3">Continue →</button>
+        </div>
+      </form>
+
+      <!-- STEP 3: This or that -->
+      <form class="step-panel" data-panel="3">
+        <span class="signup-eyebrow">Step 03</span>
+        <h2 class="signup-heading">This or that</h2>
+        <p class="signup-sub">Quick gut reactions — no wrong answers.</p>
+
+        <div class="tot-row"><span class="tot-label">Mountains</span><div class="tot-toggle"><button type="button" class="tot-opt active">Mountains</button><button type="button" class="tot-opt">Ocean</button></div></div>
+        <div class="tot-row"><span class="tot-label">Early riser</span><div class="tot-toggle"><button type="button" class="tot-opt">Early riser</button><button type="button" class="tot-opt active">Night owl</button></div></div>
+        <div class="tot-row"><span class="tot-label">Plan it</span><div class="tot-toggle"><button type="button" class="tot-opt active">Plan it out</button><button type="button" class="tot-opt">Wing it</button></div></div>
+        <div class="tot-row"><span class="tot-label">Coffee</span><div class="tot-toggle"><button type="button" class="tot-opt active">Coffee</button><button type="button" class="tot-opt">Tea</button></div></div>
+        <div class="tot-row"><span class="tot-label">Cook in</span><div class="tot-toggle"><button type="button" class="tot-opt">Cook in</button><button type="button" class="tot-opt active">Eat out</button></div></div>
+        <div class="tot-row"><span class="tot-label">City</span><div class="tot-toggle"><button type="button" class="tot-opt active">City</button><button type="button" class="tot-opt">Countryside</button></div></div>
+        <div class="tot-row"><span class="tot-label">Window seat</span><div class="tot-toggle"><button type="button" class="tot-opt active">Window seat</button><button type="button" class="tot-opt">Aisle seat</button></div></div>
+        <div class="tot-row"><span class="tot-label">Dog or cat</span><div class="tot-toggle"><button type="button" class="tot-opt active">Dog person</button><button type="button" class="tot-opt">Cat person</button></div></div>
+        <div class="tot-row"><span class="tot-label">Sweet</span><div class="tot-toggle"><button type="button" class="tot-opt">Sweet</button><button type="button" class="tot-opt active">Savory</button></div></div>
+        <div class="tot-row"><span class="tot-label">Night out</span><div class="tot-toggle"><button type="button" class="tot-opt">Quiet night in</button><button type="button" class="tot-opt active">Out on the town</button></div></div>
+
+        <div class="step-nav">
+          <button type="button" class="btn prev-btn" data-prev="2">← Back</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="4">Continue →</button>
+        </div>
+      </form>
+
+      <!-- STEP 4: Home style -->
+      <form class="step-panel" data-panel="4">
+        <span class="signup-eyebrow">Step 04</span>
+        <h2 class="signup-heading">Your home style</h2>
+        <p class="signup-sub">Pick the vibe that feels most like you — and leave a note for anyone thinking of staying with you.</p>
+
+        <div class="style-grid">
+          <label class="style-opt"><input type="radio" name="home-style" checked><span class="style-name">Coastal & airy</span></label>
+          <label class="style-opt"><input type="radio" name="home-style"><span class="style-name">Warm & rustic</span></label>
+          <label class="style-opt"><input type="radio" name="home-style"><span class="style-name">Minimal & modern</span></label>
+          <label class="style-opt"><input type="radio" name="home-style"><span class="style-name">Eclectic & maximal</span></label>
+          <label class="style-opt"><input type="radio" name="home-style"><span class="style-name">Dark & moody</span></label>
+          <label class="style-opt"><input type="radio" name="home-style"><span class="style-name">Bright & bohemian</span></label>
+        </div>
+
+        <label class="field-label" for="message-me" style="margin-top:22px;">Message me about</label>
+        <textarea class="field-input" id="message-me" rows="3" placeholder="Restaurant recs, trail tips, or just say hi before you arrive."></textarea>
+
+        <div class="step-nav">
+          <button type="button" class="btn prev-btn" data-prev="3">← Back</button>
+          <button type="button" class="btn btn-primary next-btn" data-next="5">Continue →</button>
+        </div>
+      </form>
+
+      <!-- STEP 5: Host profile + disclaimers -->
+      <form class="step-panel" data-panel="5">
+        <span class="signup-eyebrow">Step 05</span>
+        <h2 class="signup-heading">Your host profile</h2>
+        <p class="signup-sub">This is where you show your future guests who you are and what your space is like. The circle only works when everyone brings something to it.</p>
+
+        <div class="host-note">
+          <strong>Required to complete your application:</strong> at least 3 photos of yourself, at least 7 photos of your space, a written bio, and your general city. Your exact address is never shared until a stay is confirmed.<br><br>
+          Once you're accepted, you'll receive a link to finalize and update your profile — so nothing here needs to be perfect yet. Think of this as your first draft.
+        </div>
+
+        <label class="field-label" for="host-city">Your city</label>
+        <input class="field-input" id="host-city" type="text" placeholder="e.g. Atlanta, GA">
+
+        <label class="field-label" for="home-type">Type of home</label>
+        <select class="field-input" id="home-type">
+          <option value="" disabled selected>Select your home type</option>
+          <option>Apartment</option>
+          <option>Condo</option>
+          <option>Loft</option>
+          <option>House</option>
+          <option>Townhouse</option>
+          <option>Studio</option>
+          <option>Penthouse</option>
+          <option>Cottage / Cabin</option>
+          <option>Villa</option>
+          <option>Other</option>
+        </select>
+
+        <label class="field-label" for="host-bio">Your bio</label>
+        <textarea class="field-input" id="host-bio" rows="4" placeholder="Tell potential guests about yourself — your neighborhood, what makes your space special, what you love about where you live..."></textarea>
+
+        <label class="field-label">Photos of you <span style="opacity:0.5">— minimum 3</span></label>
+        <div class="photo-upload-area">
+          <span class="upload-count">3 min.</span>
+          <p>Drag photos here or click to select<br><span style="opacity:0.5;font-size:0.7rem;">So guests know who they're staying with</span></p>
+        </div>
+
+        <label class="field-label" style="margin-top:22px;">Photos of your space <span style="opacity:0.5">— minimum 7</span></label>
+        <div class="photo-upload-area">
+          <span class="upload-count">7 min.</span>
+          <p>Living room, bedroom, kitchen, bathroom — tell the story of your home<br><span style="opacity:0.5;font-size:0.7rem;">Good light, honest shots</span></p>
+        </div>
+
+        <!-- Disclaimer checkboxes -->
+        <div class="disclaimer-section">
+          <div class="disclaimer-box">
+            <input type="checkbox" id="disc-1" required>
+            <label for="disc-1">By checking this box, I confirm that I am submitting my application to become a <strong>Founding Member of Meet Me There</strong> and understand that founding membership is limited and subject to approval.</label>
+          </div>
+          <div class="disclaimer-box">
+            <input type="checkbox" id="disc-2" required>
+            <label for="disc-2">I understand that the information I've provided will be used to <strong>create my member profile</strong> and match me with like-minded hosts and guests within the MMT community.</label>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button type="button" class="btn prev-btn" data-prev="4">← Back</button>
+          <button type="submit" class="btn btn-primary">Submit application</button>
+        </div>
+      </form>
+
+      <!-- Done -->
+      <div class="step-panel" data-panel="done">
+        <div class="eyebrow" style="justify-content:center;margin-bottom:20px;">Application received</div>
+        <h2 class="signup-heading" style="text-align:center;margin-bottom:14px;">You're on the list.</h2>
+        <p class="signup-sub" style="text-align:center;margin:0 auto 12px;max-width:40ch;">Welcome to the founding circle. We review every application personally and most people hear back within 3–5 business days.</p>
+        <p class="signup-sub" style="text-align:center;margin:0 auto 32px;max-width:40ch;font-style:italic;">We'll be in touch soon.</p>
+        <a href="index.html" class="btn" style="width:100%;justify-content:center;">← Back to home</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="splash-footer">
+  <span>© 2026 Meet Me There</span>
+</footer>
+
+<script src="js/signup.js"></script>
+<script>
+  const toggle = document.getElementById('splash-toggle');
+  const links = document.getElementById('splash-nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

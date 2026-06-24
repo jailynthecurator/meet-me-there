@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stay In The Loop — Meet Me There</title>
+<link rel="stylesheet" href="css/splash.css">
+</head>
+<body class="splash">
+<div class="blueprint"></div>
+
+<nav class="splash-nav">
+  <span class="splash-logo">MMT — Est. 2026</span>
+  <div class="splash-nav-links" id="splash-nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#join">Join</a>
+  </div>
+  <button class="splash-mobile-toggle" id="splash-toggle" aria-label="Toggle menu">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</nav>
+
+<div class="noreferral-shell">
+  <div class="noreferral-card" id="subscribe-card">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:16px;">Stay In The Loop</div>
+    <h1>We'll keep you posted.</h1>
+    <p>Not a member yet — that's okay. Leave your email and we'll keep you in the loop on new cities, updates, and when the circle opens up again.</p>
+    <p style="font-style:italic;font-size:0.8rem;">This is not a membership. Just a way to stay connected.</p>
+
+    <div style="margin-top:28px;">
+      <label class="join-label" for="sub-name" style="font-family:'Courier Prime',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ivory-mid);display:block;margin-bottom:8px;">Your name</label>
+      <input class="join-input" id="sub-name" type="text" placeholder="Jordan Avery" style="width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-mid);color:var(--ivory);padding:10px 0;font-family:'Courier Prime',monospace;font-size:0.92rem;margin-bottom:20px;">
+
+      <label class="join-label" for="sub-email" style="font-family:'Courier Prime',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ivory-mid);display:block;margin-bottom:8px;">Your email</label>
+      <input class="join-input" id="sub-email" type="email" placeholder="you@example.com" style="width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-mid);color:var(--ivory);padding:10px 0;font-family:'Courier Prime',monospace;font-size:0.92rem;margin-bottom:24px;">
+
+      <button onclick="handleSubscribe()" class="btn btn-primary" style="width:100%;justify-content:center;">Subscribe →</button>
+    </div>
+
+    <div id="sub-success" style="display:none;text-align:center;margin-top:24px;">
+      <p style="color:var(--ivory);font-family:'Courier Prime',monospace;font-size:0.88rem;line-height:1.8;">You're on the list. We'll be in touch.</p>
+      <a href="index.html" class="btn" style="width:100%;justify-content:center;margin-top:16px;">← Back home</a>
+    </div>
+  </div>
+</div>
+
+<footer class="splash-footer">
+  <span>© 2026 Meet Me There</span>
+</footer>
+
+<script>
+  const toggle = document.getElementById('splash-toggle');
+  const links = document.getElementById('splash-nav-links');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+  async function handleSubscribe() {
+    const name  = document.getElementById('sub-name').value.trim();
+    const email = document.getElementById('sub-email').value.trim();
+    if (!name || !email) { alert('Please enter your name and email.'); return; }
+
+    // Send to Airtable subscribers table (reusing same base)
+    try {
+      await fetch('https://api.airtable.com/v0/appFgDvKVR05JBx3g/tbl6KVpFjVsnTWajG', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer patQnkHCylQhZUFwq.40b951b3d00fb8b97f2af61018b420e1e21743090cb3e69601134f6c640100c8',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ fields: { 'Name': name, 'Email': email, 'Referral Tier': 'Waitlist' } })
+      });
+    } catch(e) { console.log(e); }
+
+    document.querySelector('#subscribe-card > *:not(#sub-success)') && 
+    document.querySelectorAll('#subscribe-card > *:not(#sub-success)').forEach(el => el.style.display = 'none');
+    document.getElementById('sub-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
